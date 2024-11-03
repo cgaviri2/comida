@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Restaurante Sabores de Colombia</title>
+    
+</head>
+<body>
+    <header>
+        <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/14/45/d5/comida-colombiana.jpg" alt="Logo Sabores de Colombia" class="logo">
+        <h1>Restaurante Sabores de Colombia</h1>
+        <nav>
+            <button onclick="showSection('entradas')">Entradas</button>
+            <button onclick="showSection('platos_fuerte')">Platos Fuertes</button>
+            <button onclick="showSection('bebidas')">Bebidas</button>
+            <button onclick="showSection('postres')">Postres</button>
+            <button onclick="showSection('carrito')">Carrito</button>
+            <button onclick="showSection('contacto')">Contacto</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="section active">
+            <h2>Bienvenido a nuestro restaurante</h2>
+            <p>Disfruta de la mejor comida colombiana.</p>
+            <img src="c:\Users\Jessica\OneDrive\Escritorio\descarga.png" alt="Comida Colombiana" class="intro-image">
+        </section>
+
+        <section id="entradas" class="section">
+            <h2>Entradas</h2>
+            <div class="menu-item">
+                <span>Arepas</span>
+                <span>5000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-arepas" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Arepas', 5000, document.getElementById('cantidad-arepas').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Marranitas</span>
+                <span>4000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Marranitas" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Marranitas', 5000, document.getElementById('cantidad-Marranitas').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Empanadas</span>
+                <span>3000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-empanadas" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Empanadas', 3000, document.getElementById('cantidad-empanadas').value)">Agregar</button>
+            </div>
+        </section>
+
+        <section id="platos_fuerte" class="section">
+            <h2>Platos Fuertes</h2>
+            <div class="menu-item">
+                <span>Bandeja Paisa</span>
+                <span>15000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-bandeja" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Bandeja Paisa', 15000, document.getElementById('cantidad-bandeja').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Arroz Atollado</span>
+                <span>22000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Aroz Atollado" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Aroz Atollado', 15000, document.getElementById('cantidad-Aroz Atollado').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Ajiaco</span>
+                <span>22000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Ajiaco" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Ajiaco', 15000, document.getElementById('cantidad-Ajiaco').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Chuleta</span>
+                <span>22000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Chuleta" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Chuleta', 18000, document.getElementById('cantidad-Chuleta').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Sancocho Valluno</span>
+                <span>20000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Sancocho Valluno" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Sancocho Valluno', 20000, document.getElementById('cantidad-Sancocho Valluno').value)">Agregar</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span>Trucha</span>
+            <span>25000 COP</span>
+            <input type="number" value="1" min="1" id="cantidad-Trucha" onchange="actualizarTotal()">
+            <button onclick="agregarAlCarrito('Trucha', 20000, document.getElementById('cantidad-Trucha').value)">Agregar</button>
+        </div>
+        </section>
+
+        <section id="bebidas" class="section">
+            <h2>Bebidas</h2>
+            <div class="menu-item">
+                <span>Agua de Panela</span>
+                <span>4000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-agua" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Agua de Panela', 2000, document.getElementById('cantidad-agua').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Limonada</span>
+                <span>3000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Limonada" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Limonada', 3000, document.getElementById('cantidad-Limonada').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Cerveza</span>
+                <span>6000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Cerveza" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Refresco', 3000, document.getElementById('cantidad-Cerveza<').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Jugo en leche</span>
+                <span>5000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Jugo en leche" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Jugo en leche', 3000, document.getElementById('cantidad-Jugo en leche<').value)">Agregar</button>
+            </div>
+        </section>
+
+        <section id="postres" class="section">
+            <h2>Postres</h2>
+            <div class="menu-item">
+                <span>Flan de Milo</span>
+                <span>8000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-flan" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Flan', 4000, document.getElementById('cantidad-flan').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Arroz con leche</span>
+                <span>7000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Arroz con leche" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Arroz con leche', 4000, document.getElementById('cantidad-Arroz con leche').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Postre de Maracuyá</span>
+                <span>9000 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Postre de Maracuyá" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Postre de Maracuyá', 4000, document.getElementById('cantidad-Postre de Maracuyá').value)">Agregar</button>
+            </div>
+            <div class="menu-item">
+                <span>Postre tres Leches</span>
+                <span>9500 COP</span>
+                <input type="number" value="1" min="1" id="cantidad-Postre tres Leches" onchange="actualizarTotal()">
+                <button onclick="agregarAlCarrito('Postre tres Leches', 3500, document.getElementById('cantidad-Postre tres Leches').value)">Agregar</button>
+            </div>
+        </section>
+
+        <section id="carrito" class="section">
+            <h2>Carrito de Compras</h2>
+            <div id="lista-carrito"></div>
+            <h3>Total: <span id="total">0</span> COP</h3>
+            <button onclick="abrirDialogoPago()">Realizar Pago</button>
+        </section>
+
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <p>Para consultas y domicilios, llámanos al 123-456-7890.</p>
+            <p>Email: contacto@saboresdecolombia.com</p>
+            <p>Cali Valle del Cauca</p>
+            <p>Dirección: carrera 2A No. 2-28</p>
+            <p>Barrio: El Ingenio</p>
+            <div>
+                <!-- Código del mapa aquí -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092345!2d144.95373531531538!3d-37.81627997975189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f15fd05%3A0x5045675218ceed30!2sYour%20Location!5e0!3m2!1sen!2sus!4v1616796516883!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <div id="dialogo-pago" class="dialogo" style="display: none;">
+            <div class="dialogo-contenido">
+                <h3>Pago</h3>
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label>Número de Tarjeta:</label>
+                <input type="text" id="numero-tarjeta" required placeholder="XXXX-XXXX-XXXX-XXXX">
+                <label>Fecha de Expiración:</label>
+                <input type="text" id="fecha-expiracion" required placeholder="MM/AA">
+                <label>Código de Seguridad:</label>
+                <input type="text" id="codigo-seguridad" required placeholder="CVC">
+                <button onclick="realizarPago()">Confirmar Pago</button>
+                <button onclick="cerrarDialogoPago()">Cancelar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurante Sabores de Colombia. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
